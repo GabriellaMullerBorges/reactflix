@@ -7,15 +7,13 @@ import"./Geral.css"
 import { Style } from './index.js'
 
 import { Nav } from './components/Nav'
+import Home from './pages/home'
 
 export function App() {
   return (
     <Style>
       <div className='App'>
-      <Nav></Nav>
-      <Link to='movie'>Movie</Link>
-      <h1>Reactflix</h1>
-            <Link to='/search'>Search</Link>
+      <Nav></Nav>      
       <Outlet />
       </div>
     </Style>
