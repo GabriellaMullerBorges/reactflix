@@ -5,6 +5,7 @@ import { Searchform } from './Searchform'
 import { StyledNav } from './NavStyle'
 
 export function Nav() {
+
   return (
     <StyledNav>
       <nav id='navbar'>
