@@ -14,8 +14,8 @@ form{
     };
 
  button{
-    background-color:hotpink;
-    border: 2px solid hotpink;
+    background-color:orange;
+    border: 2px solid orange;
     border-radius:5px;
     color:black;
     padding: 0.3rem;

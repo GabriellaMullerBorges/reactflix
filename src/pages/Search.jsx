@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import MovieCards from '../components/MovieCards';
+import Footer from '../components/Footer';
 
 import { StyledGrid } from '../components/MovieGrid';
 
@@ -21,21 +22,24 @@ const Search = () => {
   useEffect(() => {
     const displaySearchedMovies = `${searchURL}?${apiKey}&query=${query}`;
     getSearchedMovies(displaySearchedMovies);
-  }, []);
+  }, [query]);
 
   return (
     <StyledGrid>
+      <div className='page'>  
       <div>
         <div className='container'>
           <h2 className='div-title'>
             Resultados para:<span className='query-text'>{query}</span>
           </h2>
           <div className="movies-container">
-          {movies && movies.length === 0 && <p>Carregando...</p>}
+          {movies && movies.length === 0 && <p className='notfind'> Não encontramos resultados para sua pesquisa</p>}
           {movies && movies.length > 0 && movies.map((movie) => <MovieCards key={movie.id} movie={movie} />)}
           </div>
         </div>
       </div>
+    <Footer></Footer>
+    </div>
     </StyledGrid>
   );
 };

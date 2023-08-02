@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import MovieCards from '../components/MovieCards';
+import Footer from '../components/Footer';
 
 import { StyledGrid } from '../components/MovieGrid';
 
@@ -19,7 +20,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 
  useEffect(() => {
 
-    const displayMovies = `${movieURL}top_rated?${apiKey}`;
+    const displayMovies = `${movieURL}now_playing?${apiKey}`;
 
     getMovies(displayMovies);
 
@@ -27,15 +28,18 @@ const apiKey = import.meta.env.VITE_API_KEY;
 
 
     return (
+      <>
       <StyledGrid>
       <div className='container'> 
-         <h2 className='div-title'> Melhores filmes </h2>
+         <h2 className='div-title'> Nos cinemas: </h2>
          <div className="movies-container">
                   {Movies.length === 0 && <p>Carregando...</p>}
                   {Movies.length>0 && Movies.map((movie) => <MovieCards key={movie.id} movie={movie}/>) }
          </div>  
       </div>
     </StyledGrid>
+    <Footer></Footer>
+    </>
     
   )
 };
