@@ -25,6 +25,7 @@ export const MovieStyle = styled.nav`
 }
 
 .filme-detalhes{
+    padding-left:1rem;
     h2{
         width:100%;
         text-align:center;
@@ -76,4 +77,49 @@ export const MovieStyle = styled.nav`
 .descricao {
     line-height: 1.8rem;
 }
+
+@media (max-width: 1270px) {
+
+    .page-filme {
+    width:100%;
+    height:fit-content;
+    margin:0;
+    padding:0;
+
+}
+
+.filme-infos{
+    display:flex;
+    flex-direction:column;
+}
+
+.filme-card{
+    width:100%
+}
+
+.movietitle{
+    display: none;
+}
+
+.filme-detalhes, .info {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.descricao-texto{
+    padding:0 1.2rem;
+}
+
+}
+
+@media (max-width: 1270px){
+
+    .page-filme {
+    border-radius:0;
+    }
+}
+
 `

@@ -54,33 +54,33 @@ function Movie() {
         <MovieCards movie={movie} showLink={false}/>
       </div>
       <div className="filme-detalhes">
-      <h2>{movie.title}</h2>
-    <p className='tagline'>{movie.tagline}</p>
-    <div className='info'>
-        <h3>
-          <BsWallet2/>Orçamento:
-        </h3>
-        <p>{formatarMoeda(movie.budget)}</p>
-    </div>
-    <div className="info">
-        <h3> 
-          <BsGraphUp/>Faturamento:
-        </h3>
-        <p>{formatarMoeda(movie.revenue)}</p>
-    </div>
-    <div className="info">
-        <h3>
-          <BsHourglassSplit/>Duração:
-        </h3>
-        <p>{movie.runtime} min</p>
-    </div>
-    <div className="info descricao">
-      <h3>
-        <BsFillFileEarmarkTextFill/>Descrição:
-      </h3>
-      <p>{movie.overview}</p>
-      </div>
-      </div>
+        <h2 className='movietitle'>{movie.title}</h2>
+        <p className='tagline'>{movie.tagline}</p>
+        <div className='info'>
+            <h3>
+              <BsWallet2/>Orçamento:
+            </h3>
+            <p>{formatarMoeda(movie.budget)}</p>
+        </div>
+        <div className="info">
+            <h3> 
+              <BsGraphUp/>Faturamento:
+            </h3>
+            <p>{formatarMoeda(movie.revenue)}</p>
+        </div>
+        <div className="info">
+            <h3>
+              <BsHourglassSplit/>Duração:
+            </h3>
+            <p>{movie.runtime} min</p>
+        </div>
+        <div className="info descricao">
+          <h3>
+            <BsFillFileEarmarkTextFill/>Descrição:
+          </h3>
+          <p className='descricao-texto'>{movie.overview}</p>
+        </div>
+      </div> 
     </div>
 
   )}

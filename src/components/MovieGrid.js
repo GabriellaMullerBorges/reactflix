@@ -17,29 +17,34 @@ export const StyledGrid = styled.div`
     display:flex;
     flex-wrap:wrap; 
     justify-content:space-between;
+    align-items:stretch;
     padding: 2rem;
-    max-width:1200px;
+    max-width:1400px;
     margin: 0 auto;
+    gap:.8rem;
+
+
     
 }
 
 .movies-container div{
-    width: 30%;
+    width: 20%;
     color:black;
     font-size:.8rem;
     margin-bottom: 2.5rem;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
+
     background-color:#0b0b0b;
     color:white;
     text-align:center; 
     border-radius:8px;
     font-size:1.1rem;
-    
+    min-width:340px;
 
     img{
-        max-width:95%;
+        width:92%;
         height:450px;
         margin-top:1rem;
     }
@@ -62,8 +67,8 @@ export const StyledGrid = styled.div`
         width:100%;
         background-color:#0b0b0b;
         display:flex;
-        justify-content:center;
         align-items:center;
+
     }
 
     svg{
@@ -71,6 +76,7 @@ export const StyledGrid = styled.div`
         color:orange;
     }
 
+   
     a {
     background-color:#131313;
     border: 2px solid #131313;
@@ -97,8 +103,27 @@ export const StyledGrid = styled.div`
     font-size:2rem;
 }
 
+@media (max-width: 1106px) {
 
 
+    .movies-container {
+        width:100%;
+        display:flex;
+        justify-content: center;
+        padding:0;
+    }
+}
 
+@media (max-width: 1462px) {
+
+
+.movies-container {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    padding:0;
+
+}
+}
 
 `

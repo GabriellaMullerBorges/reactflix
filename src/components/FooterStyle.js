@@ -17,7 +17,7 @@ bottom: 0;
     align-items:center;
     text-align:center;
     gap:0.5rem;
-    padding:1rem;
+    padding:1rem 0;
     }
    
 `
