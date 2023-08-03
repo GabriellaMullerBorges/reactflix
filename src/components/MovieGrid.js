@@ -36,7 +36,7 @@ export const StyledGrid = styled.div`
     flex-direction:column;
     justify-content:space-between;
 
-    background-color:#0b0b0b;
+    background-color:black;
     color:white;
     text-align:center; 
     border-radius:8px;
@@ -65,18 +65,33 @@ export const StyledGrid = styled.div`
 
     .poster-box{
         width:100%;
-        background-color:#0b0b0b;
+        background-color:black;
         display:flex;
         align-items:center;
 
+        a{
+            background-color: black;
+            border:none; 
+        }
+
+        img{
+                filter: grayscale(0);
+                border: 1px solid yellow;
+            }
     }
 
-    svg{
-        margin-right: 0.5rem;
-        color:orange;
+    .poster-box:hover{
+ 
+        a:hover{
+            background-color: black;  
+            border: none;
+
+            img{
+                filter: grayscale(1)
+            }
+        }
     }
 
-   
     a {
     background-color:#131313;
     border: 2px solid #131313;
@@ -94,7 +109,10 @@ export const StyledGrid = styled.div`
       color:white;
       border: 2px solid #c84600;
     }
+
 }
+
+
 
 .notfind{
     color:white;
@@ -102,6 +120,13 @@ export const StyledGrid = styled.div`
     text-align:center;
     font-size:2rem;
 }
+
+
+svg{
+        margin-right: 0.5rem;
+        color:orange;
+    }
+
 
 @media (max-width: 1106px) {
 

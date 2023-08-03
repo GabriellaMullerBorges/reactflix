@@ -9,7 +9,9 @@ const MovieCards = ({movie, showLink = true}) => {
   return (
     <div className="movie-card">
       <div className='poster-box'>
+      <Link to={`/movie/${movie.id}`}>
         <img src={imageURL + movie.poster_path} alt={movie.title} className="poster" />
+      </Link>
       </div>
         <h2>{movie.title}</h2>
         <p>

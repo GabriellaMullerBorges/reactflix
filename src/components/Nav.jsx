@@ -14,9 +14,7 @@ export function Nav() {
                   <BiCameraMovie />
                   Reactflix
               </Link>
-          </h1>
-          <Searchform></Searchform>
-            
+          </h1>           
       </nav>
     </StyledNav>
   )

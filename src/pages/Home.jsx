@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import MovieCards from '../components/MovieCards';
 import Footer from '../components/Footer';
+import Chamada from '../components/Chamada';
 
 import { StyledGrid } from '../components/MovieGrid';
 
@@ -29,6 +30,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 
     return (
       <>
+      <Chamada></Chamada>
       <StyledGrid>
       <div className='container'> 
          <h2 className='div-title'> Nos cinemas: </h2>
