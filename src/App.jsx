@@ -7,7 +7,6 @@ import"./Geral.css"
 import { Style } from './index.js'
 
 import { Nav } from './components/Nav'
-import Home from './pages/home'
 
 export function App() {
   return (
