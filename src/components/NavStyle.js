@@ -10,13 +10,19 @@ align-items:center;
 padding: 1rem 2rem;
 background-color:black;
 
- h2 a {
+ h1 a {
     display:flex;
     align-items:center;
     gap: 0.5rem;
     }
 }
 
+.links {
+    display: flex;
+    width:70%;
+    align-items:center;
+    justify-content:space-evenly
+}
 
 
 `

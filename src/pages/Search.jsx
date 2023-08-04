@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import MovieCards from '../components/MovieCards';
 import Footer from '../components/Footer';
+import { MiniNav } from '../components/MiniNav';
 
 import { StyledGrid } from '../components/MovieGrid';
 
@@ -25,6 +26,8 @@ const Search = () => {
   }, [query]);
 
   return (
+    <>
+    <MiniNav></MiniNav>
     <StyledGrid>
       <div className='page'>  
       <div>
@@ -34,13 +37,15 @@ const Search = () => {
           </h2>
           <div className="movies-container">
           {movies && movies.length === 0 && <p className='notfind'> Não encontramos resultados para sua pesquisa</p>}
-          {movies && movies.length > 0 && movies.map((movie) => <MovieCards key={movie.id} movie={movie} />)}
+          {movies && movies.length > 0 && movies.map((movie) => 
+              <MovieCards key={movie.id} movie={movie} />)}
           </div>
         </div>
       </div>
     <Footer></Footer>
     </div>
     </StyledGrid>
+    </>
   );
 };
 

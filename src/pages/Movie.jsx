@@ -4,6 +4,7 @@ import { BsGraphUp, BsWallet2, BsHourglassSplit, BsFillFileEarmarkTextFill} from
 import { MovieStyle } from './MovieStyle';
 import MovieCards from '../components/MovieCards';
 import Footer from '../components/Footer';
+import { MiniNav } from '../components/MiniNav';
 
 const movieDetailedURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -46,6 +47,7 @@ function Movie() {
 
   return (
     <>
+    <MiniNav></MiniNav>
     <MovieStyle>
     <div className='page-filme'>
     {movie && (
