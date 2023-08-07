@@ -5,11 +5,15 @@ import { MovieStyle } from './MovieStyle';
 import MovieCards from '../components/MovieCards';
 import Footer from '../components/Footer';
 import { MiniNav } from '../components/MiniNav';
+import { MenuMobile } from '../components/MenuMobile';
 
 const movieDetailedURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
-function Movie() {
+const Movie = () => {
+
+  const [menuIsVisible, setMenuIsVisible]= useState(false);
+  
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
 
@@ -47,7 +51,11 @@ function Movie() {
 
   return (
     <>
-    <MiniNav></MiniNav>
+    <MenuMobile
+       menuIsVisible={menuIsVisible}
+       setMenuIsVisible={setMenuIsVisible}
+      />
+         <MiniNav setMenuIsVisible={setMenuIsVisible}/>
     <MovieStyle>
     <div className='page-filme'>
     {movie && (

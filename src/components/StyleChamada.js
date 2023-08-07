@@ -61,5 +61,17 @@ width:100%;
 }
 
 
+@media(max-width: 700px) {
+
+    .chamada{
+        text-align:center;
+    }
+
+    .chamada-sub{
+        padding:0;
+    }
+}
+
+
 
 `

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import MovieCards from '../components/MovieCards';
 import Footer from '../components/Footer';
 import { MiniNav } from '../components/MiniNav';
+import { MenuMobile } from '../components/MenuMobile';
 
 import { StyledGrid } from '../components/MovieGrid';
 
@@ -10,6 +11,9 @@ const movieURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
  const TopRated = () => {
+
+ const [menuIsVisible, setMenuIsVisible]= useState(false);
+
  const [Movies, setMovies] = useState([])
 
  const getMovies = async (url) => {
@@ -30,7 +34,11 @@ const apiKey = import.meta.env.VITE_API_KEY;
 
     return (
       <>
-      <MiniNav></MiniNav>
+          <MenuMobile
+       menuIsVisible={menuIsVisible}
+       setMenuIsVisible={setMenuIsVisible}
+      />
+         <MiniNav setMenuIsVisible={setMenuIsVisible}/>
       <StyledGrid>
       <div className='container'> 
          <h2 className='div-title'> Top Rated: </h2>

@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import MovieCards from '../components/MovieCards';
 import Footer from '../components/Footer';
 import { MiniNav } from '../components/MiniNav';
+import { MenuMobile } from '../components/MenuMobile';
 
 import { StyledGrid } from '../components/MovieGrid';
 
@@ -10,6 +11,9 @@ const searchURL = import.meta.env.VITE_SEARCH;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 const Search = () => {
+
+  const [menuIsVisible, setMenuIsVisible]= useState(false);
+
   const [searchParams] = useSearchParams();
   const [movies, setMovies] = useState([]);
   const query = searchParams.get("query");
@@ -27,7 +31,11 @@ const Search = () => {
 
   return (
     <>
-    <MiniNav></MiniNav>
+        <MenuMobile
+       menuIsVisible={menuIsVisible}
+       setMenuIsVisible={setMenuIsVisible}
+      />
+         <MiniNav setMenuIsVisible={setMenuIsVisible}/>
     <StyledGrid>
       <div className='page'>  
       <div>

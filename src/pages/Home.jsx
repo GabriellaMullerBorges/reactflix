@@ -4,6 +4,7 @@ import MovieCards from '../components/MovieCards';
 import Footer from '../components/Footer';
 import Chamada from '../components/Chamada';
 import { Nav } from '../components/Nav'
+import { MenuMobile } from '../components/MenuMobile';
 
 import { StyledGrid } from '../components/MovieGrid';
 
@@ -11,6 +12,8 @@ const movieURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
  const Home = () => {
+
+ const [menuIsVisible, setMenuIsVisible]= useState(false);
  const [Movies, setMovies] = useState([])
 
  const getMovies = async (url) => {
@@ -31,7 +34,11 @@ const apiKey = import.meta.env.VITE_API_KEY;
 
     return (
       <>
-      <Nav></Nav> 
+      <MenuMobile
+       menuIsVisible={menuIsVisible}
+       setMenuIsVisible={setMenuIsVisible}
+      />
+         <Nav setMenuIsVisible={setMenuIsVisible}/>
       <Chamada></Chamada>
       <StyledGrid>
       <div className='container'> 

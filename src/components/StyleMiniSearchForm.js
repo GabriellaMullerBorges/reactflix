@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const StyleMiniSearchForm = styled.div`
-  width:800px;
+  width:60%;
   display:flex; 
-  margin-top:1rem; 
+
 
 form{
   display:flex;  
@@ -26,9 +26,8 @@ form{
  button{
     background-color:orange;
     border: 2px solid orange;
-    border-top-right-radius: 5px; /* Ajuste o valor do border-radius para o efeito desejado */
+    border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    color:black;
     padding: 0.7rem;
     display:flex;
     align-items:center;
@@ -38,13 +37,22 @@ form{
     } 
     
     button:hover{
-      background-color:crimson;
+      background-color:yellow;
       color:white;
-      border: 2px solid crimson;
+      border: 2px solid yellow;
       z-index:2;
     }
 }
 
+@media(max-width: 700px) {
+
+form{
+  display:flex;  
+  justify-content:center;
+  width:100%;
+}
+
+}
 
 
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledForm = styled.div`
-  width:800px;
+  min-width:700px;
   display:flex; 
   margin-top:1rem; 
 
@@ -44,6 +44,13 @@ form{
       z-index:2;
     }
 }
+
+@media(max-width: 700px) {
+
+   min-width:0;
+   width:100%;
+
+  }
 
 
 

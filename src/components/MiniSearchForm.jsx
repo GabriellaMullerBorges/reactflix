@@ -24,7 +24,7 @@ export function MiniSearchform() {
         <input type='text' placeholder='Buscar...' onChange={(e) => setSearch (e.target.value)}
         value={search}/>
         <button type='submit'>
-            <BiSearchAlt2></BiSearchAlt2>
+            <BiSearchAlt2 style={{ color: 'black' }}/>
         </button>
     </form>
     </StyleMiniSearchForm>
