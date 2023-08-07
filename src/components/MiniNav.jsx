@@ -1,20 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {BiCameraMovie} from 'react-icons/bi'
+import { MiniSearchform } from './MiniSearchForm'
 import { StyledNav } from './NavStyle'
 
-export function Nav() {
-
+export function MiniNav() {
   return (
     <StyledNav>
-      <nav id='navbar'>
-          <h1>
-              <Link to='/'>
-                  <BiCameraMovie />
-                  Reactflix
-              </Link>
-          </h1>    
-          <div className='links'>
+    <nav id='navbar'>
+        <h1>
+            <Link to='/'>
+                <BiCameraMovie />
+                Reactflix
+            </Link>
+        </h1>
+        <div className='links'>
             <p> 
                 <Link to='/top'>
                     Top Filmes  
@@ -25,9 +25,9 @@ export function Nav() {
                     Em Breve  
             </Link>
             </p>
-        </div>    
-      </nav>
+        </div>
+        <MiniSearchform></MiniSearchform>        
+    </nav>
     </StyledNav>
   )
 }
-

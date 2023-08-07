@@ -38,7 +38,8 @@ export const MovieStyle = styled.nav`
 }
 
 .movie-card {
-
+ display: flex;
+ flex-direction: column;
     img{
         margin-top: 3rem;
     }
