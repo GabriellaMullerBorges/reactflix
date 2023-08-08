@@ -6,12 +6,6 @@
 Este aplicativo web foi desenvolvido como uma plataforma de busca de informações de filmes, por meio da API da IMDB.
 
 ## ✔️ Funcionalidades: 
-* Adiciona to-do
-* Remove to-do
-* Marca to-do como feito
-* Filtra to-dos
-* Muda de tema: light e dark
-* Armazena to-dos
 
 ## ⚠️ Melhorias Futuras:
 * Mudança no tema
