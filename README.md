@@ -16,10 +16,16 @@ Este aplicativo web foi desenvolvido como uma plataforma de busca de informaçõ
 * React 
 * Javascript
 * Styled Coponents
-* *API TMDB
+* API TMDB
 
 # 📁 Acesso ao projeto:
  O projeto pode ser acessado no link que se encontra na seção "About" ou  "Sobre".
+
+# ⚠️ Instalações:
+* Vite
+* React router
+* React icons
+* Styled components
  
 # 🛠️ Abrir e rodar o projeto
  
